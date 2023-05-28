@@ -29,6 +29,7 @@ function send(string $message = ''): void {
     curl_close($ch);
 }
 
+echo "🟠 Подключение к серверу $ip:$port";
 while (true) {
     $socket = fsockopen("udp://" . gethostbyname($ip), $port);
 
