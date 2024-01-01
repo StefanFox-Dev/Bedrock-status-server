@@ -9,8 +9,8 @@ txt = f"🟠 Подключение к серверу {ip}:{port}"
 
 # Отправка сообщений в Телеграм, ВК / Send message to Telegram, VK
 def send(message=''):
-    token = '6948049317:AAFjMmwoz3s4tE85d0Wzi8i98unHNbTPhHQ'  # токен бота / token bot
-    chat_id = '-1002124550588'  # айди чата / chat id
+    token = '6948049317:token'  # токен бота / token bot
+    chat_id = '-1002'  # айди чата / chat id
 
     telegram_url = f'https://api.telegram.org/{token}/sendMessage?chat_id={chat_id}&text={message}'
     requests.get(telegram_url)
