@@ -56,7 +56,7 @@ while True:
     except socket.gaierror:
         if status is not True:
             status = False
-            txt = f"[{time.strftime('%d-%m-%Y %H:%M:%S')}/{port}] > Статус сервера изменился на 🔴"
+            txt = f"[{time.strftime('%d-%m-%Y %H:%M:%S')}/{port}] > Статус сервера изменился на 🔴 (socket)"
             send(txt)
             print(txt)
     
