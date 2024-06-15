@@ -40,21 +40,21 @@ while True:
         socket_udp.close()
         numplayers = int(server_players[4]) if len(server_players) > 4 else 0
             
-        if status is not False:
+        if status is not True:
             status = True
             txt = f"[{time.strftime('%d-%m-%Y %H:%M:%S')}/{port}] > Статус сервера изменился на 🟢\nОнлайн: {numplayers}"
             send(txt)
             print(txt)
         
     except socket.timeout:
-        if status is not True:
+        if status is not False:
             status = False
             txt = f"[{time.strftime('%d-%m-%Y %H:%M:%S')}/{port}] > Статус сервера изменился на 🔴 (response)"
             send(txt)
             print(txt)
         
     except socket.gaierror:
-        if status is not True:
+        if status is not False:
             status = False
             txt = f"[{time.strftime('%d-%m-%Y %H:%M:%S')}/{port}] > Статус сервера изменился на 🔴 (socket)"
             send(txt)
